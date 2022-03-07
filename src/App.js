@@ -12,8 +12,6 @@ import NotFound from './pages/NotFound';
 import FindUs from './pages/FindUs';
 import About from './pages/About';
 import SignIn from './pages/SignIn';
-import Profile from './pages/Profile';
-
 
 // COMPONENTS
 import NavBar from './components/NavBar/NavBar';
@@ -22,22 +20,21 @@ import ItemDetailContainer from './components/Store/ItemDetailContainer/ItemDeta
 import ShoppingCartSuccess from './components/Store/ShoppingCartSuccess/ShoppingCartSuccess';
 
 const App = () => {
-
     return (
         <CartProvider>
             <BrowserRouter>
                 <NavBar/>
                 <Routes>
                     <Route index element={ <Home /> }/>
-                    <Route path="shop" element={<Shop /> }/>
-                    <Route path="findus" element={<FindUs /> }/>
-                    <Route path="about" element={<About /> }/>
-                    <Route path="signin" element={<SignIn /> }/>
-                    <Route path="profile" element={<Profile /> }/>
+                    <Route path="shop" element={ <Shop /> }/>
+                    <Route path="findus" element={ <FindUs /> }/>
+                    <Route path="about" element={ <About /> }/>
+                    <Route path="signin" element={ <SignIn /> }/>
                     <Route path=":category" element={ <Shop /> }/>
                     <Route path="details/:id" element={ <ItemDetailContainer /> }/>
                     <Route path="success/:id" element={ <ShoppingCartSuccess /> }/>
                     <Route path="*" element={ <NotFound /> }/>
+                    <Route path="notfound" element={ <NotFound /> }/>
                 </Routes>
                 <Footer/>
             </BrowserRouter>

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 // FIREBASE
 import { FirebaseConfig } from "../../../firebase/firebaseConfig";
@@ -33,7 +31,7 @@ function FeaturedProducts() {
             <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                 <div className="flex justify-between mb-4">
                     <h2 className="mt-1 text-xl font-medium text-gray-900">Food</h2>
-                    <Link className="mt-4 text-sm text-gray-700" to="/shop"> Explore flavours <FontAwesomeIcon icon={faArrowRight}/></Link>
+                    <Link className="mt-4 text-sm text-gray-700" to="/shop"> Explore flavours &rarr;</Link>
                 </div>
                 <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8">
                     {product.slice(4, 8).map((product) => (
