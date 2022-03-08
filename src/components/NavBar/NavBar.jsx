@@ -119,9 +119,9 @@ const navigation = {
 
 
 const NavBar = (NavBarProps) => {
+
     const [open, setOpen] = useState(false)
     const [openCart, setOpenCart] = useState(false)
-
 
     return (
         <div className="bg-white">

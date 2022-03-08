@@ -21,6 +21,8 @@ const ShoppingCart = ({openCart, setOpenCart}) => {
         name: "", 
         lastname:"", 
         email: "",
+        cartTotal: "",
+        cartProducts: "",
     };
 
     const [values, setValues] = useState(initialState);
@@ -28,7 +30,26 @@ const ShoppingCart = ({openCart, setOpenCart}) => {
 
     const handleOnChange = (e) => {
         const {value, name, lastname, email} = e.target;
-        setValues({...values, [name]:value, [lastname]:value, [email]:value})
+        setValues({...values, [name]:value, [lastname]:value, [email]:value},)
+    };
+
+    const placeOrder = (e) => {
+        let order = {
+            buyerData: {
+                name: values.name,
+                lastname: values.lastname,
+                email: values.email,
+                date: new Date(),
+            },
+            item: cartProducts.map((product) => ({
+                id: product.id,
+                name: product.titulo,
+                price: product.precio,
+                stock: product.stock,
+                count: product.count,
+            })),
+            total: parseFloat(cartTotal()),
+        }
     };
 
     const onSubmit = async (e) => {
@@ -36,6 +57,7 @@ const ShoppingCart = ({openCart, setOpenCart}) => {
         const docRef = await addDoc(collection(db, 'orders'),{
             values,
         });
+        placeOrder();
         console.log('Document written with ID: ', docRef.id);
         navigate(`/success/${docRef.id}`);
         clearCart();
@@ -120,7 +142,7 @@ const ShoppingCart = ({openCart, setOpenCart}) => {
                                                     ?   <>
                                                             {/* Checkout form */}
                                                             <form onSubmit={onSubmit}>
-                                                                <div className="shadow overflow-hidden sm:rounded-full">
+                                                                <div className="shadow overflow-hidden">
                                                                     <div className="px-4 py-5 bg-white sm:p-6">
                                                                         <p className="mt-2 mb-6 text-base font-medium text-gray-900 border-b border-gray-200 py-6">Complete your personal information</p>
                                                                         <div className="grid grid-cols-6 gap-6">

@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 const HeroImageTextButton = (HeroImageTextButtonProps) => {
     return (
-        <div className="heroImageTextButton--div" style={{backgroundImage: `url(${HeroImageTextButtonProps.imgBg})`, backgroundPosition:`${HeroImageTextButtonProps.imgBackgroundPosition}`, height:`${HeroImageTextButtonProps.imgBackgroundHeight}`}}>
+        <div className="overflow-hidden w-screen flex items-center justify-center bg-no-repeat bg-cover" style={{backgroundImage: `url(${HeroImageTextButtonProps.imgBg})`, backgroundPosition:`${HeroImageTextButtonProps.imgBackgroundPosition}`, height:`${HeroImageTextButtonProps.imgBackgroundHeight}`}}>
             {HeroImageTextButtonProps.children}
             <p className="heroImageTextButton--title" style={{backgroundColor: `${HeroImageTextButtonProps.titleBackgroundColor}`, color:`${HeroImageTextButtonProps.titleColor}`}}>
                 {HeroImageTextButtonProps.title}
