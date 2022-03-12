@@ -12,7 +12,6 @@ import { FirebaseConfig } from "../../../firebase/firebaseConfig";
 
 const sortOptions = [
     { name: 'Most Popular', href: '#', current: true },
-    { name: 'Best Rating', href: '#', current: false },
     { name: 'Newest', href: '#', current: false },
     { name: 'Price: Low to High', href: '#', current: false },
     { name: 'Price: High to Low', href: '#', current: false },
@@ -21,7 +20,10 @@ const subCategories = [
     { name: 'Sweets', href: '/sweet' },
     { name: 'Savoury', href: '/savoury' },
     { name: 'Ice-cream', href: '/icecream' },
+    { name: 'Hot drinks', href: '/hotdrinks' },
+    { name: 'Cold drinks', href: '/coldrinks' },
     { name: 'Show all →', href: '/shop' },
+
 ]
 
 function classNames(...classes) {
@@ -32,26 +34,26 @@ const ItemListContainer = () => {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
     const [product, setProduct] = useState ([]);
-const [loading, setLoading] = useState(false);
-const { category } = useParams();
+    const [loading, setLoading] = useState(false);
+    const { category } = useParams();
 
-useEffect(() => {
-    const firebase = new FirebaseConfig();
+    useEffect(() => {
+        const firebase = new FirebaseConfig();
 
-    const getFromFirebase = async () => {
-        try {
-            setLoading(true);
-            const value = (category)
-            ? await firebase.getProductByCategory(category)
-            : await firebase.getProducts();
-            setProduct(value);
-            setLoading(false);
-        } catch (error) {
-        console.error("getFromFirebase", error);
-        }
-    };
-    getFromFirebase();
-}, [category]);
+        const getFromFirebase = async () => {
+            try {
+                setLoading(true);
+                const value = (category)
+                    ? await firebase.getProductByCategory(category)
+                    : await firebase.getProducts();
+                setProduct(value);
+                setLoading(false);
+            } catch (error) {
+            console.error("getFromFirebase", error);
+            }
+        };
+        getFromFirebase();
+    }, [category]);
 
     return (
     <div className="bg-white">

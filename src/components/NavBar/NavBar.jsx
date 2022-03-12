@@ -1,6 +1,5 @@
-import React from "react";
+import React, { Fragment, useContext } from "react";
 import CartWidget from '../Store/CartWidget/CartWidget';
-import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { MenuIcon, SearchIcon, XIcon } from '@heroicons/react/outline'
 import { Link } from 'react-router-dom';
@@ -9,6 +8,9 @@ import { Link } from 'react-router-dom';
 import LogoMenu from '../../images/logo/logo-white.svg';
 import TaiyakiEmoji from '../../images/emoji/taiyaki-emoji.png';
 import ShoppingCart from "../Store/ShoppingCart/ShoppingCart";
+
+// CONTEXT
+import { CartContext } from '../../context/CartContext';
 
 const navigation = {
     categories: [
@@ -90,19 +92,19 @@ const navigation = {
                 id: 'hotdrinks',
                 name: 'Hot drinks',
                 items: [
-                    { name: 'Coffee', href: '#' },
-                    { name: 'Tea', href: '#' },
-                    { name: 'Matcha', href: '#' },
-                    { name: 'Hot Chocolate', href: '#' },
+                    { name: 'Coffee', href: '/coffee' },
+                    { name: 'Tea', href: '/tea' },
+                    { name: 'Matcha', href: '/matcha' },
+                    { name: 'Hot Chocolate', href: '/hotchocolate' },
                 ],
             },
             {
                 id: 'coldDrinks',
                 name: 'Cold drinks',
                 items: [
-                    { name: 'Juice', href: '#' },
-                    { name: 'Lemonade', href: '#' },
-                    { name: 'Still water', href: '#' },
+                    { name: 'Juice', href: '/juice' },
+                    { name: 'Lemonade', href: '/lemonade' },
+                    { name: 'Still water', href: '/stillwater' },
                 ],
             },
         ],
@@ -120,8 +122,7 @@ const navigation = {
 
 const NavBar = (NavBarProps) => {
 
-    const [open, setOpen] = useState(false)
-    const [openCart, setOpenCart] = useState(false)
+    const { open, setOpen, openCart, setOpenCart } = useContext(CartContext);
 
     return (
         <div className="bg-white">

@@ -17,15 +17,19 @@ const ShoppingCart = ({openCart, setOpenCart}) => {
     const [openCheckout, setOpenCheckout] = useState(false);
     const handleCheckoutToggle = () => { setOpenCheckout(!openCheckout);};
 
-    const initialState = {
+    const valuesInitialState = {
         name: "", 
         lastname:"", 
         email: "",
-        cartTotal: "",
-        cartProducts: "",
+    };
+    const orderInitialState = {
+        cartTotal:"", 
+        cartProducts:"", 
     };
 
-    const [values, setValues] = useState(initialState);
+    const [values, setValues] = useState(valuesInitialState);
+    const [order, setOrder] = useState(orderInitialState);
+
     const navigate = useNavigate();
 
     const handleOnChange = (e) => {
@@ -33,35 +37,17 @@ const ShoppingCart = ({openCart, setOpenCart}) => {
         setValues({...values, [name]:value, [lastname]:value, [email]:value},)
     };
 
-    const placeOrder = (e) => {
-        let order = {
-            buyerData: {
-                name: values.name,
-                lastname: values.lastname,
-                email: values.email,
-                date: new Date(),
-            },
-            item: cartProducts.map((product) => ({
-                id: product.id,
-                name: product.titulo,
-                price: product.precio,
-                stock: product.stock,
-                count: product.count,
-            })),
-            total: parseFloat(cartTotal()),
-        }
-    };
-
     const onSubmit = async (e) => {
         e.preventDefault();
+        setOrder({cartTotal, cartProducts});
         const docRef = await addDoc(collection(db, 'orders'),{
             values,
+            order,
         });
-        placeOrder();
         console.log('Document written with ID: ', docRef.id);
         navigate(`/success/${docRef.id}`);
         clearCart();
-        setValues({initialState});
+        setValues({valuesInitialState});
         setOpenCart(false);
     };
 

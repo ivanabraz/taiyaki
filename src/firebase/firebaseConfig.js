@@ -1,21 +1,21 @@
 import { initializeApp } from 'firebase/app';
-import {getFirestore, collection, getDocs, getDoc, doc, query, where} from 'firebase/firestore'
+import { getFirestore, collection, getDocs, getDoc, doc, query, where } from 'firebase/firestore'
 
 const firebaseConfig = {
-    apiKey: (process.env.API_KEY),
-    authDomain: "taiyaki-85b82.firebaseapp.com",
-    projectId: "taiyaki-85b82",
-    storageBucket: "taiyaki-85b82.appspot.com",
-    messagingSenderId: "217962657157",
-    appId: "1:217962657157:web:1628eb2bf78b3da6b0c0ec",
-    measurementId: "G-BQQCPGSNX6"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_API_ID,
+    measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 
-
 export class FirebaseConfig {
+	// PRODUCTS
 	async getProducts() {
 		try {
 			const productCollection = collection(db, 'taiyaki');
@@ -54,20 +54,4 @@ export class FirebaseConfig {
 		}
 	};
 
-	// async addOrder(items, name, lastname, price, total) {
-	// 	try {
-	// 		const newOrder = {
-	// 			name,
-	// 			lastname,
-    //             items,
-	// 			date: Timestamp.now().toDate(),
-	// 			price,
-	// 			total,
-	// 		};
-	// 		const docRef = await addDoc(collection(db, 'orders'), newOrder);
-	// 		return docRef.id;
-	// 	} catch (error) {
-	// 		console.error('addOrder', error);
-	// 	}
-	// };
 }

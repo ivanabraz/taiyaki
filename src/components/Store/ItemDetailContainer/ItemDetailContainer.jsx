@@ -14,7 +14,8 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(false);
     const [added, setAdded] = useState (false);
     const { addProduct } = useContext(CartContext);
-    const { id: productId } = useParams();
+    const { id } = useParams();
+    
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -23,7 +24,7 @@ const ItemDetailContainer = () => {
         const getFromFirebase = async () => {
             try {
                 setLoading(true);
-                const product = await firebase.getProductById(productId);
+                const product = await firebase.getProductById(id);
                 setLoading(false);
                 if (product) {
                     setProduct(product);
@@ -36,7 +37,7 @@ const ItemDetailContainer = () => {
             }
         };
         getFromFirebase();
-    }, [productId, navigate]);
+    }, [id, navigate]);
 
     const onAdd = (count) => {
         addProduct(product, count);

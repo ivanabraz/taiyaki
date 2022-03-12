@@ -12,25 +12,42 @@ export const CartProvider = ({ children }) => {
         cartProducts.reduce((item, product) => item + product.price * product.count, 0), [cartProducts]
     );
 
+    // OPEN CART
+    const [open, setOpen] = useState(false)
+    const [openCart, setOpenCart] = useState(false)
+
     // PRODUCT IS IN CART
-    const isInCart = (id) => {
-        return cartProducts.some((x) => x.product.id === id);
+    // const isInCart = (id) => {
+    //     return cartProducts.some((x) => x.product.id === id);
+    // };
+    const isInCart = (product) => {
+        return cartProducts.some((prod) => prod.id === product.id);
     };
 
+
     // ADD PRODUCT
+    // const addProduct = (product, count) => {
+    //     if (isInCart(product.id)) {
+    //         const indexItem = cartProducts.findIndex((x) => x.product.id === product.id);
+    //         cartProducts[indexItem].count = cartProducts[indexItem].count + count;
+    //         setCartProducts([...cartProducts]);
+    //     } else {
+    //         setCartProducts([...cartProducts, { product: product, count: count }]);
+    //     }
+    // };
     const addProduct = (product, count) => {
         if (isInCart(product.id)) {
-        const indexItem = cartProducts.findIndex((x) => x.product.id === product.id);
-        cartProducts[indexItem].count = cartProducts[indexItem].count + count;
-        setCartProducts([...cartProducts]);
+            const indexItem = cartProducts.findIndex((x) => x.product.id === product.id);
+            cartProducts[indexItem].count = cartProducts[indexItem].count + count;
+            setCartProducts([...cartProducts]);
         } else {
-        setCartProducts([...cartProducts, { product: product, count: count }]);
+            setCartProducts([...cartProducts, { product: product, count: count }]);
         }
     };
 
     // REMOVE PRODUCT
     const removeProduct = (id) => {
-        setCartProducts(cartProducts.filter((product) => product.id !== id));
+        setCartProducts(cartProducts.filter((product) => product.product.id !== id));
     };
 
     // CLEAR CART
@@ -51,7 +68,10 @@ export const CartProvider = ({ children }) => {
 
     // RETURN CONTEXT
     return (
-        <CartContext.Provider value={{ cartProducts, setCartProducts, isInCart, addProduct, removeProduct, clearCart, cartTotal, cartAmount, totalItems }}>
+        <CartContext.Provider value={{ 
+            cartProducts, setCartProducts, isInCart, 
+            addProduct, removeProduct, clearCart, cartTotal, cartAmount, 
+            totalItems, open, setOpen, openCart, setOpenCart }}>
             { children }
         </CartContext.Provider>
     );
