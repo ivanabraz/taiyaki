@@ -20,10 +20,9 @@ const subCategories = [
     { name: 'Sweets', href: '/sweet' },
     { name: 'Savoury', href: '/savoury' },
     { name: 'Ice-cream', href: '/icecream' },
-    { name: 'Hot drinks', href: '/hotdrinks' },
-    { name: 'Cold drinks', href: '/coldrinks' },
+    { name: 'Hot drinks', href: '/hot-drinks' },
+    { name: 'Cold drinks', href: '/cold-drinks' },
     { name: 'Show all →', href: '/shop' },
-
 ]
 
 function classNames(...classes) {

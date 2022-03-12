@@ -54,4 +54,16 @@ export class FirebaseConfig {
 		}
 	};
 
+	async getProductByMainCategory(mainCategory) {
+		try {
+			const q = query(collection(db, 'taiyaki'), where('category-main', '==', mainCategory));
+			const docSnapshot = await getDocs(q);
+			return docSnapshot.docs.map(doc => ({
+				id: doc.id, ...doc.data(),
+			}));
+		} catch (error) {
+			console.error('getProductByMainCategory', error);
+		}
+	};
+
 }

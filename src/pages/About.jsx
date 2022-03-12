@@ -17,7 +17,7 @@ function About() {
             imgAlt="Shop image" imgBg={ShopBgImg} imgBackgroundPosition={"top center"} imgBackgroundHeight={"100vh"}>
                 
                 {/* LEFT */}
-                <img data-aos='fade-up' src={flying2} alt="Flying Taiyaki" 
+                <img src={flying2} alt="Flying Taiyaki" 
                     className='absolute w-80 animate-[spin_60s_linear_infinite] 
                     xs:top-[0em] xs:left-[0em] xs:invisible
                     sm:top-[0em] sm:left-[0em] sm:visible
@@ -25,7 +25,7 @@ function About() {
                     lg:top-50 lg:left-[25em] lg:visible
                     xl:top-50 xl:left-[35em] xl:visible
                 '/>
-                <img data-aos='fade-up' src={flying3} alt="Flying Taiyaki"
+                <img src={flying3} alt="Flying Taiyaki"
                     className='absolute w-80 animate-[spin_15s_linear_infinite] 
                     xs:bottom-[0em] xs:left-[0em] xs:invisible
                     sm:bottom-[0em] sm:left-[0em] sm:visible
@@ -33,7 +33,7 @@ function About() {
                     lg:bottom-0 lg:left-10 lg:visible
                     xl:bottom-[20em] xl:left-[3em] xl:visible
                 '/>
-                <img data-aos='fade-up' src={flying1} alt="Flying Taiyaki"
+                <img src={flying1} alt="Flying Taiyaki"
                     className='absolute w-80 animate-[spin_90s_linear_infinite] 
                     xs:bottom-[0em] xs:left-[0em] xs:invisible
                     sm:bottom-[0em] sm:left-[0em] sm:visible
@@ -43,7 +43,7 @@ function About() {
                 '/>
 
                 {/* RIGHT */}
-                <img data-aos='fade-up' src={flying5} alt="Flying Taiyaki"
+                <img src={flying5} alt="Flying Taiyaki"
                     className='absolute w-80 animate-[spin_30s_linear_infinite] 
                     xs:top-[0em] xs:right-[0em] xs:visible
                     sm:top-[0em] sm:right-[0em] sm:visible
@@ -51,7 +51,7 @@ function About() {
                     lg:top-[-2em] lg:right-[5em] lg:visible
                     xl:top-0 xl:right-[30em] xl:visible
                 '/>
-                <img data-aos='fade-up' src={flying4} alt="Flying Taiyaki" 
+                <img src={flying4} alt="Flying Taiyaki" 
                     className='absolute w-80 animate-[spin_20s_linear_infinite] 
                     xs:bottom-[0em] xs:right-[12em] xs:visible
                     sm:bottom-[-10em] sm:right-[15em] sm:visible
@@ -59,7 +59,7 @@ function About() {
                     lg:bottom-[-10em] lg:right-[4em] lg:visible
                     xl:bottom-[10em] xl:right-[5em] xl:visible
                 '/>
-                <img data-aos='fade-up' src={flying3} alt="Flying Taiyaki" 
+                <img src={flying3} alt="Flying Taiyaki" 
                     className='absolute w-80 animate-[spin_40s_linear_infinite] 
                     xs:bottom-[0em] xs:right-[0em] xs:invisible
                     sm:bottom-[0em] sm:right-[0em] sm:visible

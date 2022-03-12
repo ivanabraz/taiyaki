@@ -76,35 +76,35 @@ const navigation = {
         featured: [
             {
                 name: 'Best sellers',
-                href: '/shop',
+                href: '/shop/drinks',
                 imageSrc: 'https://firebasestorage.googleapis.com/v0/b/taiyaki-85b82.appspot.com/o/drinks-02.jpg?alt=media&token=32280d31-3fd1-4e7c-9d05-716c26819ae8',
                 imageAlt: 'Coffee',
             },
             {
-                name: 'Explore all drinks',
-                href: '/shop',
+                name: 'Explore all',
+                href: '/shop/drinks',
                 imageSrc: 'https://firebasestorage.googleapis.com/v0/b/taiyaki-85b82.appspot.com/o/drinks-01.jpg?alt=media&token=5b27dc91-7148-4a2a-9d7d-3735035d7dd1',
-                imageAlt: 'Explore all drinks',
+                imageAlt: 'Explore all',
             },
         ],
         sections: [
             {
-                id: 'hotdrinks',
+                id: 'hot-drinks',
                 name: 'Hot drinks',
                 items: [
-                    { name: 'Coffee', href: '/coffee' },
-                    { name: 'Tea', href: '/tea' },
-                    { name: 'Matcha', href: '/matcha' },
-                    { name: 'Hot Chocolate', href: '/hotchocolate' },
+                    { name: 'Coffee', href: '/details/coffee' },
+                    { name: 'Tea', href: '/details/tea' },
+                    { name: 'Matcha', href: '/details/matcha' },
+                    { name: 'Hot Chocolate', href: '/details/hotchocolate' },
                 ],
             },
             {
-                id: 'coldDrinks',
+                id: 'cold-drinks',
                 name: 'Cold drinks',
                 items: [
-                    { name: 'Juice', href: '/juice' },
-                    { name: 'Lemonade', href: '/lemonade' },
-                    { name: 'Still water', href: '/stillwater' },
+                    { name: 'Juice', href: '/details/juice' },
+                    { name: 'Lemonade', href: '/details/lemonade' },
+                    { name: 'Still water', href: '/details/stillwater' },
                 ],
             },
         ],
