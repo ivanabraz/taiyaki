@@ -4,7 +4,7 @@
 
   ## Overview
   This project was created for the ReactJs Course (24915) at [CODERHOUSE](https://www.coderhouse.com/).
-  ![Emoji](./readme/emoji.pngx80)
+  ![Emoji](./readme/emoji.png =80)
   <br>
   <br>
 
@@ -62,5 +62,5 @@
 
 
 
-[![Github](./readme/github.pngx80)](https://github.com/ivanabraz)
-[![Linkedin](./readme/linkedin.pngx80)](https://www.linkedin.com/in/ivanabraz/)
+[![Github](./readme/github.png =80)](https://github.com/ivanabraz)
+[![Linkedin](./readme/linkedin.png =80)](https://www.linkedin.com/in/ivanabraz/)
