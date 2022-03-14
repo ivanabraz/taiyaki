@@ -4,7 +4,7 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 import PropagateLoader from "react-spinners/ClipLoader";
 
 // FIREBASE
-import { FirebaseConfig } from "../../../firebase/firebaseConfig";
+import { getProductById } from "../../../firebase/firebaseConfig";
 
 // CONTEXT
 import { CartContext } from '../../../context/CartContext';
@@ -19,12 +19,10 @@ const ItemDetailContainer = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const firebase = new FirebaseConfig();
-
         const getFromFirebase = async () => {
             try {
                 setLoading(true);
-                const product = await firebase.getProductById(id);
+                const product = await getProductById(id);
                 setLoading(false);
                 if (product) {
                     setProduct(product);
@@ -48,7 +46,7 @@ const ItemDetailContainer = () => {
         <Fragment>
             {loading 
                 ? <PropagateLoader /> 
-                : <ItemDetail {...product} product={product} onAdd={onAdd} added={added}/>
+                : <ItemDetail {...product} onAdd={onAdd} added={added}/>
             }
         </Fragment>
     );

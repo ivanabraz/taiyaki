@@ -8,7 +8,7 @@ import ItemList from '../ItemList/ItemList';
 import PropagateLoader from "react-spinners/ClipLoader";
 
 // FIREBASE
-import { FirebaseConfig } from "../../../firebase/firebaseConfig";
+import { getProductByCategory, getProducts } from "../../../firebase/firebaseConfig";
 
 const sortOptions = [
     { name: 'Most Popular', href: '#', current: true },
@@ -31,20 +31,17 @@ function classNames(...classes) {
 
 const ItemListContainer = () => {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-
     const [product, setProduct] = useState ([]);
     const [loading, setLoading] = useState(false);
     const { category } = useParams();
 
     useEffect(() => {
-        const firebase = new FirebaseConfig();
-
         const getFromFirebase = async () => {
             try {
                 setLoading(true);
                 const value = (category)
-                    ? await firebase.getProductByCategory(category)
-                    : await firebase.getProducts();
+                    ? await getProductByCategory(category)
+                    : await getProducts();
                 setProduct(value);
                 setLoading(false);
             } catch (error) {

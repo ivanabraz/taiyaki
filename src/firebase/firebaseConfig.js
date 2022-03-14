@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs, getDoc, doc, query, where } from 'firebase/firestore'
+import { getFirestore, collection, getDocs, getDoc, doc, query, where, documentId } from 'firebase/firestore'
+import { useState} from 'react';
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
@@ -14,9 +15,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 
-export class FirebaseConfig {
+
 	// PRODUCTS
-	async getProducts() {
+	export const getProducts = async (id) => {
 		try {
 			const productCollection = collection(db, 'taiyaki');
 			const docSnapshot = await getDocs(productCollection);
@@ -28,7 +29,7 @@ export class FirebaseConfig {
 		}
 	};
 
-	async getProductById(id) {
+	export const getProductById = async (id) => {
 		try {
 			const productCollection = doc(db, 'taiyaki', id);
 			const docSnapshot = await getDoc(productCollection);
@@ -42,7 +43,7 @@ export class FirebaseConfig {
 		}
 	};
 
-	async getProductByCategory(category) {
+	export const getProductByCategory = async (category) => {
 		try {
 			const q = query(collection(db, 'taiyaki'), where('category', '==', category));
 			const docSnapshot = await getDocs(q);
@@ -53,17 +54,3 @@ export class FirebaseConfig {
 			console.error('getProductByCategory', error);
 		}
 	};
-
-	async getProductByMainCategory(mainCategory) {
-		try {
-			const q = query(collection(db, 'taiyaki'), where('category-main', '==', mainCategory));
-			const docSnapshot = await getDocs(q);
-			return docSnapshot.docs.map(doc => ({
-				id: doc.id, ...doc.data(),
-			}));
-		} catch (error) {
-			console.error('getProductByMainCategory', error);
-		}
-	};
-
-}

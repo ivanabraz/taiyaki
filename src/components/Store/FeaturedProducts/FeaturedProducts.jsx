@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 // FIREBASE
-import { FirebaseConfig } from "../../../firebase/firebaseConfig";
+import { getProductByCategory, getProducts } from "../../../firebase/firebaseConfig";
 
 function FeaturedProducts() {
 
@@ -11,13 +11,11 @@ function FeaturedProducts() {
     const { category } = useParams();
     
     useEffect(() => {
-        const firebase = new FirebaseConfig();
-
         const getFromFirebase = async () => {
             try {
                 const value = (category)
-                ? await firebase.getProductByCategory(category)
-                : await firebase.getProducts();
+                ? await getProductByCategory(category)
+                : await getProducts();
                 setProduct(value);
             } catch (error) {
             console.error("getFromFirebase", error);
