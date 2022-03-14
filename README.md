@@ -4,14 +4,14 @@
 
   ## Overview
   This project was created for the ReactJs Course (24915) at [CODERHOUSE](https://www.coderhouse.com/).
-  <img src="./readme/emoji.png" alt="Taiyaki emoji" width="80" height="80">
+  <img src="./readme/emoji.png" alt="Taiyaki emoji" width="25" height="19">
   <br>
   <br>
 
   ## About | Sobre
-  <br>
   🇬🇧 EN<br>
-  Hello👋 My name is [Ivana Braz](http://github.com/ivanabraz)<br>
+  Hello👋 My name is [Ivana Braz](http://github.com/ivanabraz)
+  <br>
   <br>
   For this final work I've decided to materialize a personal project called **Taiyaki**. This concept store offers an unique gastronomic proposal, based on the iconic Japanese fish-shaped cake, adapting and carefully curating new flavours for people to enjoy.<br>
   <br>
@@ -22,7 +22,8 @@
   ---
   <br>
   🇪🇸 ES<br>
-  Hola👋 Mi nombre es [Ivana Braz](http://github.com/ivanabraz)<br>
+  Hola👋 Mi nombre es [Ivana Braz](http://github.com/ivanabraz)
+  <br>
   <br>
   Para este trabajo final he decidido materializar un proyecto personal llamado **Taiyaki**. Este *concept store* ofrece una propuesta gastronómica única, basada en el icónico pastel japonés con forma de pez, adaptando y curando cuidadosamente nuevos sabores para el disfrute de la gente.<br>
   <br>
@@ -63,7 +64,7 @@
 
 
 <p align="center">
-  <img src="./readme/github.png" alt="Taiyaki emoji" width="80" height="80">[Github](./readme/github.png)(https://github.com/ivanabraz)
-  <img src="./readme/linkedin.png" alt="Taiyaki emoji" width="80" height="80">[Linkedin](./readme/linkedin.png)(https://www.linkedin.com/in/ivanabraz/)
+  <img src="./readme/github.png" alt="Taiyaki emoji" width="30" height="30">[Github](https://github.com/ivanabraz)
+  <img src="./readme/linkedin.png" alt="Taiyaki emoji" width="30" height="30">[Linkedin](https://www.linkedin.com/in/ivanabraz/)
 </p>
 
