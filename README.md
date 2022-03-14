@@ -1,6 +1,6 @@
 # Taiyaki | Ivana Braz | ReactJs CODERHOUSE
 
-<div style="background-color: #000;>
+<div style="background-color: #000;">
   ![TaiyakiLogo](./gifs/taiyaki.gif)
 
   ## Overview
@@ -24,7 +24,7 @@
   ## Live Link / Demo Link: 🔗
   [Netlify](https://taiyaki-taiyaki.netlify.app)
   <br>
-  <br>n
+  <br>
   ## Dependencies / Resources
   - Project created with React App
   - Dependencies <br>
@@ -46,5 +46,5 @@
   ![About](./gifs/about.gif)
   ![Shopping cart](./gifs/shoppingcart.gif)
   ![Sign in](./gifs/signin.gif)
-  
+
   </div>
