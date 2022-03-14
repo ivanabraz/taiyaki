@@ -1,6 +1,5 @@
 # Taiyaki | Ivana Braz | ReactJs CODERHOUSE
 
-<div style="background-color: #000;">
   ![TaiyakiLogo](./gifs/taiyaki.gif)
 
   ## Overview
@@ -8,7 +7,7 @@
   <br>
   <br>
 
-  ## About
+  ## About // Sobre
   Hello👋 My name is [Ivana Braz](http://github.com/ivanabraz).<br>
   <br>
   For this final work I've decided to materialize a personal project called **Taiyaki**. This concept store offers an unique gastronomic proposal, based on the iconic Japanese fish-shaped cake, adapting and carefully curating new flavours for people to enjoy.<br>
@@ -40,11 +39,13 @@
   <br>
 
   ## Navigability:
-  ![Home](./gifs/home.gif)
-  ![Shop](./gifs/shop.gif)
-  ![Product detail](./gifs/productdetail.gif)
-  ![About](./gifs/about.gif)
-  ![Shopping cart](./gifs/shoppingcart.gif)
-  ![Sign in](./gifs/signin.gif)
+  ![Navigability](./gifs/navigability.gif)
 
-  </div>
+  ## Stills:
+  ![Home](./gifs/home.png)
+  ![Shop](./gifs/shop.png)
+  ![Product detail](./gifs/itemdetail.png)
+  ![About](./gifs/about.gif)
+  ![Shopping cart](./gifs/shoppingcart.png)
+  ![Sign in](./gifs/signin.png)
+

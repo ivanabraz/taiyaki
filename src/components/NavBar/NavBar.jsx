@@ -76,13 +76,13 @@ const navigation = {
         featured: [
             {
                 name: 'Best sellers',
-                href: '/shop/drinks',
+                href: '/shop',
                 imageSrc: 'https://firebasestorage.googleapis.com/v0/b/taiyaki-85b82.appspot.com/o/drinks-02.jpg?alt=media&token=32280d31-3fd1-4e7c-9d05-716c26819ae8',
                 imageAlt: 'Coffee',
             },
             {
                 name: 'Explore all',
-                href: '/shop/drinks',
+                href: '/shop',
                 imageSrc: 'https://firebasestorage.googleapis.com/v0/b/taiyaki-85b82.appspot.com/o/drinks-01.jpg?alt=media&token=5b27dc91-7148-4a2a-9d7d-3735035d7dd1',
                 imageAlt: 'Explore all',
             },
