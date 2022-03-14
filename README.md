@@ -1,13 +1,14 @@
 # Taiyaki | Ivana Braz | ReactJs CODERHOUSE
 
-  ![TaiyakiLogo](./gifs/taiyaki.gif)
+  ![TaiyakiLogo](./readme/taiyaki.gif)
 
   ## Overview
   This project was created for the ReactJs Course (24915) at [CODERHOUSE](https://www.coderhouse.com/).
+  ![Emoji](./readme/emoji.pngx80)
   <br>
   <br>
 
-  ## About | Sobre ![Emoji](./readme/emoji.png)
+  ## About | Sobre
   🇬🇧 EN<br>
   Hello👋 My name is [Ivana Braz](http://github.com/ivanabraz).<br>
   <br>
@@ -30,22 +31,22 @@
   <br>
 
   ## Live Link / Demo Link: 🔗
-  [Netlify](https://taiyaki-taiyaki.netlify.app){:target="_blank"}
+  [Netlify](https://taiyaki-taiyaki.netlify.app)
   <br>
   <br>
 
   ## Dependencies & Resources | Dependencias y recursos
   - Project created with React App
   - Dependencies <br>
-    1. [Tailwindcss](https://tailwindcss.com/){:target="_blank"}
-    2. [Headless UI](https://headlessui.de){:target="_blank"}
-    3. [React Router](https://reactrouter.com/){:target="_blank"}
-    4. [Font Awesome](https://fontawesome.com/){:target="_blank"}
-    5. [Heroicons](https://heroicons.com/){:target="_blank"}
-    6. [React spinners](https://www.npmjs.com/package/react-spinners){:target="_blank"}
-    7. [Firebase](https://firebase.google.com/){:target="_blank"}
-  - Fonts from [Google Fonts](https://fonts.google.com/){:target="_blank"}
-  - Images from [Pexels](https://www.pexels.com/){:target="_blank"}, [Unsplash](https://unsplash.com/){:target="_blank"} & Google images.
+    1. [Tailwindcss](https://tailwindcss.com/)
+    2. [Headless UI](https://headlessui.de)
+    3. [React Router](https://reactrouter.com/)
+    4. [Font Awesome](https://fontawesome.com/)
+    5. [Heroicons](https://heroicons.com/)
+    6. [React spinners](https://www.npmjs.com/package/react-spinners)
+    7. [Firebase](https://firebase.google.com/)
+  - Fonts from [Google Fonts](https://fonts.google.com/)
+  - Images from [Pexels](https://www.pexels.com/), [Unsplash](https://unsplash.com/) & Google images.
   <br>
 
   ## Navigability | Navegabilidad:
@@ -60,4 +61,6 @@
   ![Sign in](./readme/signin.png)
 
 
-[![Github](./readme/github.png)](https://github.com/ivanabraz){:target="_blank"} [![Linkedin](./readme/linkedin.png)](https://www.linkedin.com/in/ivanabraz/){:target="_blank"}
+
+[![Github](./readme/github.pngx80)](https://github.com/ivanabraz)
+[![Linkedin](./readme/linkedin.pngx80)](https://www.linkedin.com/in/ivanabraz/)
