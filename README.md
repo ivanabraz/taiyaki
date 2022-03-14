@@ -17,7 +17,11 @@
   <br>
   People could buy through their cell phones and then pick up their orders at the physical store, or at one of the food trucks that are closest to them, and that will be scattered around the city.<br>
   <br>
-  ---
+<p align="center">
+  <img src="./readme/emoji.png" alt="Taiyaki emoji" width="25" height="19"> 
+  <img src="./readme/emoji.png" alt="Taiyaki emoji" width="25" height="19"> 
+  <img src="./readme/emoji.png" alt="Taiyaki emoji" width="25" height="19"> 
+</p>
   <br>
   ES 🇪🇸<br>
   Hola👋 Mi nombre es Ivana Braz.<br>
