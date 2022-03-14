@@ -86,23 +86,23 @@ const ShoppingCart = ({openCart, setOpenCart}) => {
                                                 <div className="flow-root">
                                                     <ul className="-my-6 divide-y divide-gray-200">
                                                     {cartProducts.map((product) => (
-                                                        <li key={product.product.id} className="flex py-6">
+                                                        <li key={product.id} className="flex py-6">
                                                             <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-full border border-gray-200">
-                                                                <img alt={product.product.name} src={product.product.image} className="h-full w-full object-cover object-center" />
+                                                                <img alt={product.name} src={product.image} className="h-full w-full object-cover object-center" />
                                                             </div>
                                                             <div className="ml-4 flex flex-1 flex-col">
                                                                 <div>
                                                                     <div className="flex justify-between text-base font-medium text-gray-900">
-                                                                        <Link to={`/details/${product.product.id}`}>
-                                                                            {product.product.name}
+                                                                        <Link to={`/details/${product.id}`}>
+                                                                            {product.name}
                                                                         </Link>
-                                                                        <p className="ml-4">$ {product.product.price}</p>
+                                                                        <p className="ml-4">$ {product.price}</p>
                                                                     </div>
                                                                 </div>
                                                                 <div className="flex flex-1 items-end justify-between text-sm">
                                                                     <p className="text-gray-500">Qty {product.count}</p>
                                                                     <div className="flex">
-                                                                        <button type="button" className="font-medium text-orange-600 hover:text-orange-500" onClick={() => removeProduct(product.product.id)}>
+                                                                        <button type="button" className="font-medium text-orange-600 hover:text-orange-500" onClick={() => removeProduct(product.id)}>
                                                                             Remove item <FontAwesomeIcon icon={faTimesCircle}/>
                                                                         </button>
                                                                     </div>
