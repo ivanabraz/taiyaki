@@ -14,6 +14,7 @@ function classNames(...classes) {
 }
 
 const ItemDetail = ({name, image1, image2, image3, image4, category, price, description, detail, stock, onAdd, added}) => {
+
     const { setOpenCart } = useContext(CartContext);
 
     return (

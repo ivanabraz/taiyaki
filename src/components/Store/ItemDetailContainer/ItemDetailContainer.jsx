@@ -48,7 +48,7 @@ const ItemDetailContainer = () => {
         <Fragment>
             {loading 
                 ? <PropagateLoader /> 
-                : <ItemDetail {...product} onAdd={onAdd} added={added}/>
+                : <ItemDetail {...product} product={product} onAdd={onAdd} added={added}/>
             }
         </Fragment>
     );
