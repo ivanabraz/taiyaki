@@ -62,9 +62,5 @@
   ![Sign in](./readme/signin.png)
 
 
-  <img src="./readme/github.png" alt="Taiyaki emoji" width="25" height="25">
-  [Github](https://github.com/ivanabraz)
-  <br>
-  <img src="./readme/linkedin.png" alt="Taiyaki emoji" width="25" height="25">
-  [Linkedin](https://www.linkedin.com/in/ivanabraz/)
-
+<a href="https://github.com/ivanabraz" target="_blank"><img src="./readme/github.png" alt="github" width="25" height="25"></a>
+<a href="https://www.linkedin.com/in/ivanabraz/" target="_blank"><img src="./readme/linkedin.png" alt="linkedin" width="25" height="25"></a>
