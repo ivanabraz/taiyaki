@@ -7,7 +7,7 @@
   <br>
   <br>
 
-  ## About | Sobre <img src="./readme/emoji.png" alt="Taiyaki emoji" width="25" height="19">
+  ## About | Sobre <img src="./readme/emoji.png" alt="Taiyaki emoji" width="25" height="19"> 
   EN 🇬🇧<br>
   Hello👋 My name is Ivana Braz.
   <br>
@@ -62,5 +62,5 @@
   ![Sign in](./readme/signin.png)
 
 
-<a href="https://github.com/ivanabraz" target="_blank"><img src="./readme/github.png" alt="github" width="25" height="25"></a>
-<a href="https://www.linkedin.com/in/ivanabraz/" target="_blank"><img src="./readme/linkedin.png" alt="linkedin" width="25" height="25"></a>
+<a href="https://github.com/ivanabraz" align="center"><img align="center" src="./readme/github.png" alt="github" width="25" height="25"></a>
+<a href="https://www.linkedin.com/in/ivanabraz/" align="center"><img align="center" src="./readme/linkedin.png" alt="linkedin" width="25" height="25"></a>
