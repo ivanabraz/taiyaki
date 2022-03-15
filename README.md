@@ -65,7 +65,11 @@
 
   ## Navigability | Navegabilidad:
   https://user-images.githubusercontent.com/82279460/158485697-4fd524a6-8943-427a-9f4e-a1d40f8ebe56.mp4
+  https://youtu.be/R3qPt923xfk
 
+  <br>
+  <br>
+  
   ## Stills | Capturas:
   ![Home](./readme/home.png)
   ![Shop](./readme/shop.png)
