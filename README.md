@@ -64,7 +64,8 @@
   <br>
 
   ## Navigability | Navegabilidad:
-  ![Navigability](./readme/navigability.gif)
+  ![Navigability](./readme/navigability-1.gif)
+  ![Navigability](./readme/navigability-2.gif)
 
   ## Stills | Capturas:
   ![Home](./readme/home.png)
