@@ -1,6 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs, getDoc, doc, query, where, documentId } from 'firebase/firestore'
-import { useState} from 'react';
+import { getFirestore, collection, getDocs, getDoc, doc, query, where } from 'firebase/firestore'
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
@@ -14,7 +13,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
-
 
 	// PRODUCTS
 	export const getProducts = async (id) => {
