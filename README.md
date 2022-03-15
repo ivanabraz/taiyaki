@@ -64,7 +64,7 @@
   <br>
 
   ## Navigability | Navegabilidad:
-  [![Navigability](https://img.youtube.com/vi/R3qPt923xfk/0.jpg)](https://www.youtube.com/watch?v=R3qPt923xfk)
+  https://youtu.be/R3qPt923xfk
 
   ## Stills | Capturas:
   ![Home](./readme/home.png)
