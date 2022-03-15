@@ -39,6 +39,16 @@
   <br>
   <br>
 
+  ## Setup:
+  - Clone repository
+  - Run commands in terminal:
+  ```bash
+  npm install
+  npm start 
+  ```
+  <br>
+  <br>
+
   ## Dependencies & Resources | Dependencias y recursos
   - Project created with React App
   - Dependencies <br>
