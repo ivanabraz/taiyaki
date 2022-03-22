@@ -17,18 +17,27 @@ export const CartProvider = ({ children }) => {
     const [openCart, setOpenCart] = useState(false)
 
     // PRODUCT IS IN CART
-    const isInCart = (product) => {
-        return cartProducts.some((prod) => prod.id === product.id);
+    const isInCart = (id) => {
+        return cartProducts.some((prod) => prod.product.id === id);
     };
 
     // ADD PRODUCT
     const addProduct = (product, count) => {
+        const newItem = { product, count };
         if (isInCart(product.id)) {
-            const indexItem = cartProducts.findIndex((x) => x.product.id === product.id);
-            cartProducts[indexItem].count = cartProducts[indexItem].count + count;
-            setCartProducts([...cartProducts]);
-        } else {
-            setCartProducts([...cartProducts, { product: product, count: count }]);
+            let product = cartProducts.find((p) => p.item.id === product.id);
+            product.count += count;
+        
+            let newCart = cartProducts.map((p) => {
+                if (product.item.id === p.item.id) return product;
+                return p;
+            });
+            setCartProducts(newCart);
+        } 
+        else {
+            if (count > 0) {
+                setCartProducts((prevState) => [...prevState, newItem]);
+            }
         }
     };
 

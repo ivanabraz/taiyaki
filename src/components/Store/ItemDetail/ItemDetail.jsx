@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import ItemCountStock from '../ItemCountStock/ItemCountStock';
 import { Link } from 'react-router-dom';
 import { StarIcon } from '@heroicons/react/solid'
@@ -13,9 +13,16 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-const ItemDetail = ({...product}) => {
+const ItemDetail = ({product, count}) => {
 
-    const { setOpenCart } = useContext(CartContext);
+    const { setOpenCart, addProduct } = useContext(CartContext);
+
+    const [added, setAdded] = useState(count);
+
+    const onAdd = (count) => {
+        addProduct(product, count);
+        setAdded(count);
+    };
 
     return (
         <div className="bg-white">
@@ -65,13 +72,13 @@ const ItemDetail = ({...product}) => {
                         </div>
                         {/* Add to cart */}
                         <div className='mt-10'>
-                            {product.added
+                            { added
                                 ?   <>
                                         <button onClick={() => {setOpenCart(true);}} className="mt-10 w-full bg-transparent border border-black rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-black hover:bg-black-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black-500">
                                             Added! View shopping cart
                                         </button>
                                     </>
-                                :   <ItemCountStock stock={product.stock} initial={1} onAdd={product.onAdd} />
+                                :   <ItemCountStock stock={product.stock} initial={1} onAdd={onAdd} />
                             }
                         </div>
                     </div>

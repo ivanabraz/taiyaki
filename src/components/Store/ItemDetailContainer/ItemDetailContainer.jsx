@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, Fragment } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { useNavigate, useParams } from "react-router-dom";
 import ItemDetail from '../ItemDetail/ItemDetail';
 import PropagateLoader from "react-spinners/ClipLoader";
@@ -6,14 +6,10 @@ import PropagateLoader from "react-spinners/ClipLoader";
 // FIREBASE
 import { getProductById } from "../../../firebase/firebaseConfig";
 
-// CONTEXT
-import { CartContext } from '../../../context/CartContext';
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState ({});
     const [loading, setLoading] = useState(false);
-    const [added, setAdded] = useState (false);
-    const { addProduct } = useContext(CartContext);
     const { id } = useParams();
     
     const navigate = useNavigate();
@@ -37,16 +33,11 @@ const ItemDetailContainer = () => {
         getFromFirebase();
     }, [id, navigate]);
 
-    const onAdd = (count) => {
-        addProduct(product, count);
-        setAdded(true);
-    };
-
     return (
         <Fragment>
             {loading 
                 ? <PropagateLoader /> 
-                : <ItemDetail {...product} onAdd={onAdd} added={added}/>
+                : <ItemDetail product={product}/>
             }
         </Fragment>
     );
